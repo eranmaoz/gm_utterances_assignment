@@ -1,0 +1,11 @@
+{
+  "Set temperature to 25 degrees": {"intent": "SetTemperature", "entity": "temperature=25"},
+  "Increase temperature": {"intent": "IncreaseTemperature", "entity": "action=decrease"},
+  "Decrease temperature": {"intent": "DecreaseTemperature", "entity": "action=decrease"},
+  "Set the temperature to 18 degrees": {"intent": "SetTemperature", "entity": "temperature=18"},
+  "Lower the temperature by 5 degrees": {"intent": "DecreaseTemperature", "entity": "action=decrease"},
+  "Raise the temperature to 22 degrees": {"intent": "SetTemperature", "entity": "temperature=22"},
+  "Make it cooler": {"intent": "DecreaseTemperature", "entity": "action=decrease"},
+  "Make it warmer": {"intent": "IncreaseTemperature", "entity": "action=increase"},
+  "Turn off the heater": {"intent": "TurnOffHeater", "entity": "action=off"}
+}

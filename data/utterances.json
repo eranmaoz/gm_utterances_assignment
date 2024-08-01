@@ -1,0 +1,11 @@
+[
+  {"utterance": "Set temperature to 25 degrees", "expected_intent": "SetTemperature", "expected_entity": "temperature=25"},
+  {"utterance": "Increase temperature", "expected_intent": "IncreaseTemperature", "expected_entity": "action=increase"},
+  {"utterance": "Decrease temperature", "expected_intent": "DecreaseTemperature", "expected_entity": "action=decrease"},
+  {"utterance": "Set the temperature to 18 degrees", "expected_intent": "SetTemperature", "expected_entity": "temperature=18"},
+  {"utterance": "Lower the temperature by 5 degrees", "expected_intent": "DecreaseTemperature", "expected_entity": "action=decrease"},
+  {"utterance": "Raise the temperature to 22 degrees", "expected_intent": "SetTemperature", "expected_entity": "temperature=22"},
+  {"utterance": "Make it cooler", "expected_intent": "DecreaseTemperature", "expected_entity": "action=decrease"},
+  {"utterance": "Make it warmer", "expected_intent": "IncreaseTemperature", "expected_entity": "action=increase"},
+  {"utterance": "Turn off the heater", "expected_intent": "TurnOffHeater", "expected_entity": "action=off"}
+]
