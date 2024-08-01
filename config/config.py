@@ -1,6 +1,3 @@
-# Configuration for the test
-
-
 # File paths
 UTTERANCES_FILE = '../data/utterances.json'
 MOCK_RESPONSES_FILE = '../data/mock_responses.json'
