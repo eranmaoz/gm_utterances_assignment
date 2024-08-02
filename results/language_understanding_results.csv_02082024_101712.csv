@@ -1,0 +1,10 @@
+Utterance,Expected Intent,Expected Entity,API Actual Intent,API Actual Entity,Intent Similarity,Entity Similarity
+Set temperature to 25 degrees,SetTemperature,temperature=25,SetTemperature,temperature=25,Similar,Similar
+Increase temperature,IncreaseTemperature,action=increase,IncreaseTemperature,action=decrease,Similar,Non-similar
+Decrease temperature,DecreaseTemperature,action=decrease,DecreaseTemperature,action=decrease,Similar,Similar
+Set the temperature to 18 degrees,SetTemperature,temperature=18,SetTemperature,temperature=18,Similar,Similar
+Lower the temperature by 5 degrees,DecreaseTemperature,action=decrease,DecreaseTemperature,action=decrease,Similar,Similar
+Raise the temperature to 22 degrees,SetTemperature,temperature=22,SetTemperature,temperature=22,Similar,Similar
+Make it cooler,DecreaseTemperature,action=decrease,DecreaseTemperature,action=decrease,Similar,Similar
+Make it warmer,IncreaseTemperature,action=increase,IncreaseTemperature,action=increase,Similar,Similar
+Turn off the heater,TurnOffHeater,action=off,TurnOffHeater,action=off,Similar,Similar
