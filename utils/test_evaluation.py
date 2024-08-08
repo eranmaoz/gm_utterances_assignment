@@ -6,9 +6,8 @@ def evaluate_results(results, intent_criteria, entity_criteria):
     intent_percent = (similar_intents / total_utterances) * 100
     entity_percent = (similar_entities / total_utterances) * 100
 
-    print(f"Intent similarity percentage: {intent_percent}%")
-    print(f"Entity similarity percentage: {entity_percent}%")
+    print(f"Intent similarity percentage: {intent_percent:.2f}%")
+    print(f"Entity similarity percentage: {entity_percent:.2f}%")
 
-    if intent_percent >= intent_criteria and entity_percent >= entity_criteria:
-        return True
-    return False
+    pass_criteria = intent_percent > intent_criteria and entity_percent > entity_criteria
+    return pass_criteria, intent_percent, entity_percent

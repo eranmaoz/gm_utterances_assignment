@@ -4,6 +4,7 @@ import requests
 from config.config import RESULTS_CSV_FILE, PASS_CRITERIA_PERCENTILE
 from utils.file_utils import get_utterances, get_mock_responses
 from utils.result_utils import save_results_to_csv
+from utils.test_evaluation import evaluate_results
 
 
 # Load test data using utility functions
@@ -51,13 +52,9 @@ def test_language_understanding():
     # Save results to CSV
     save_results_to_csv(results, RESULTS_CSV_FILE)
 
-    # Calculate and verify pass criteria
-    total_utterances = len(utterances)
-    similar_intents = sum(1 for r in results if r["intent_similarity"] == 'Similar')
-    similar_entities = sum(1 for r in results if r["entity_similarity"] == 'Similar')
+    # Evaluate results using the imported function
+    pass_criteria, intent_percent, entity_percent = evaluate_results(results, PASS_CRITERIA_PERCENTILE, PASS_CRITERIA_PERCENTILE)
 
-    intent_percentile = (similar_intents / total_utterances) * 100
-    entity_percentile = (similar_entities / total_utterances) * 100
-
-    assert intent_percentile >= PASS_CRITERIA_PERCENTILE, f"Intent similarity {intent_percentile}% is below pass criteria."
-    assert entity_percentile >= PASS_CRITERIA_PERCENTILE, f"Entity similarity {entity_percentile}% is below pass criteria."
+    # Assert and print failure details if needed
+    assert pass_criteria, f"Similarity percentages are below pass criteria. Intent similarity: {intent_percent}%, " \
+                          f"Entity similarity: {entity_percent}%, Pass criteria: {PASS_CRITERIA_PERCENTILE}%"
